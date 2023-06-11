@@ -25,7 +25,7 @@ Partial Class adminForm
         Me.cantidadFilasLbl = New System.Windows.Forms.Label()
         Me.filasTxt = New System.Windows.Forms.TextBox()
         Me.numeroFilasLbl = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvM = New System.Windows.Forms.DataGridView()
         Me.almacenBtn = New System.Windows.Forms.Button()
         Me.seleccionGroup = New System.Windows.Forms.GroupBox()
         Me.columnaTxt = New System.Windows.Forms.TextBox()
@@ -35,7 +35,10 @@ Partial Class adminForm
         Me.menorRbtn = New System.Windows.Forms.RadioButton()
         Me.totalRbtn = New System.Windows.Forms.RadioButton()
         Me.ejecutarSelecBtn = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.columnaArena = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnaPiedra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnaCemento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.seleccionGroup.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,13 +67,14 @@ Partial Class adminForm
         Me.numeroFilasLbl.TabIndex = 2
         Me.numeroFilasLbl.Text = "(Diseñado para #)"
         '
-        'DataGridView1
+        'dgvM
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 72)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(616, 150)
-        Me.DataGridView1.TabIndex = 3
+        Me.dgvM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.columnaArena, Me.columnaPiedra, Me.columnaCemento})
+        Me.dgvM.Location = New System.Drawing.Point(30, 72)
+        Me.dgvM.Name = "dgvM"
+        Me.dgvM.Size = New System.Drawing.Size(616, 150)
+        Me.dgvM.TabIndex = 3
         '
         'almacenBtn
         '
@@ -165,6 +169,21 @@ Partial Class adminForm
         Me.ejecutarSelecBtn.Text = "Ejecutar Seleccion"
         Me.ejecutarSelecBtn.UseVisualStyleBackColor = True
         '
+        'columnaArena
+        '
+        Me.columnaArena.HeaderText = "Arena (0)"
+        Me.columnaArena.Name = "columnaArena"
+        '
+        'columnaPiedra
+        '
+        Me.columnaPiedra.HeaderText = "Piedra (1)"
+        Me.columnaPiedra.Name = "columnaPiedra"
+        '
+        'columnaCemento
+        '
+        Me.columnaCemento.HeaderText = "Cemento (2)"
+        Me.columnaCemento.Name = "columnaCemento"
+        '
         'adminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -173,14 +192,14 @@ Partial Class adminForm
         Me.Controls.Add(Me.ejecutarSelecBtn)
         Me.Controls.Add(Me.seleccionGroup)
         Me.Controls.Add(Me.almacenBtn)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvM)
         Me.Controls.Add(Me.numeroFilasLbl)
         Me.Controls.Add(Me.filasTxt)
         Me.Controls.Add(Me.cantidadFilasLbl)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "adminForm"
         Me.Text = "Administrar"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvM, System.ComponentModel.ISupportInitialize).EndInit()
         Me.seleccionGroup.ResumeLayout(False)
         Me.seleccionGroup.PerformLayout()
         Me.ResumeLayout(False)
@@ -191,7 +210,7 @@ Partial Class adminForm
     Friend WithEvents cantidadFilasLbl As Label
     Friend WithEvents filasTxt As TextBox
     Friend WithEvents numeroFilasLbl As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvM As DataGridView
     Friend WithEvents almacenBtn As Button
     Friend WithEvents seleccionGroup As GroupBox
     Friend WithEvents totalRbtn As RadioButton
@@ -201,4 +220,7 @@ Partial Class adminForm
     Friend WithEvents columnaTxt As TextBox
     Friend WithEvents columnaLbl As Label
     Friend WithEvents ejecutarSelecBtn As Button
+    Friend WithEvents columnaArena As DataGridViewTextBoxColumn
+    Friend WithEvents columnaPiedra As DataGridViewTextBoxColumn
+    Friend WithEvents columnaCemento As DataGridViewTextBoxColumn
 End Class
