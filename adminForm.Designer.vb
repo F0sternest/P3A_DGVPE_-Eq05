@@ -97,7 +97,7 @@ Partial Class adminForm
         Me.almacenBtn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.almacenBtn.Location = New System.Drawing.Point(264, 9)
         Me.almacenBtn.Name = "almacenBtn"
-        Me.almacenBtn.Size = New System.Drawing.Size(110, 41)
+        Me.almacenBtn.Size = New System.Drawing.Size(79, 32)
         Me.almacenBtn.TabIndex = 4
         Me.almacenBtn.Text = "Ingresar "
         Me.almacenBtn.UseVisualStyleBackColor = False
@@ -112,7 +112,7 @@ Partial Class adminForm
         Me.seleccionGroup.Controls.Add(Me.columnaTxt)
         Me.seleccionGroup.Controls.Add(Me.columnaLbl)
         Me.seleccionGroup.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.seleccionGroup.Location = New System.Drawing.Point(349, 87)
+        Me.seleccionGroup.Location = New System.Drawing.Point(349, 9)
         Me.seleccionGroup.Name = "seleccionGroup"
         Me.seleccionGroup.Size = New System.Drawing.Size(179, 126)
         Me.seleccionGroup.TabIndex = 5
@@ -191,7 +191,7 @@ Partial Class adminForm
         '
         Me.ejecutarSelecBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ejecutarSelecBtn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ejecutarSelecBtn.Location = New System.Drawing.Point(378, 40)
+        Me.ejecutarSelecBtn.Location = New System.Drawing.Point(394, 142)
         Me.ejecutarSelecBtn.Name = "ejecutarSelecBtn"
         Me.ejecutarSelecBtn.Size = New System.Drawing.Size(92, 41)
         Me.ejecutarSelecBtn.TabIndex = 6
@@ -202,16 +202,16 @@ Partial Class adminForm
         'respuesta
         '
         Me.respuesta.AutoSize = True
-        Me.respuesta.Location = New System.Drawing.Point(393, 11)
+        Me.respuesta.Location = New System.Drawing.Point(391, 200)
         Me.respuesta.Name = "respuesta"
-        Me.respuesta.Size = New System.Drawing.Size(39, 13)
+        Me.respuesta.Size = New System.Drawing.Size(10, 13)
         Me.respuesta.TabIndex = 7
-        Me.respuesta.Text = "Label1"
+        Me.respuesta.Text = "-"
         Me.respuesta.UseWaitCursor = True
         '
         'tbrespuesta
         '
-        Me.tbrespuesta.Location = New System.Drawing.Point(438, 9)
+        Me.tbrespuesta.Location = New System.Drawing.Point(448, 193)
         Me.tbrespuesta.Name = "tbrespuesta"
         Me.tbrespuesta.Size = New System.Drawing.Size(51, 20)
         Me.tbrespuesta.TabIndex = 8

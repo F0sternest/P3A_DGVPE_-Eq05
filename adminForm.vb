@@ -19,9 +19,7 @@
             dgvM.Rows(0 + i).HeaderCell.Value = InputBox("Nombre del almacen número" & i + 1, "Almacenes", "")
         Next
 
-        'dgvM.Rows(0).HeaderCell.Value = "San Miguelito"
-        'dgvM.Rows(1).HeaderCell.Value = "San Miguelito 1"
-        'dgvM.Rows(2).HeaderCell.Value = "San Miguelito 2"
+
     End Sub
 
     Private Sub ejecutarSelecBtn_Click(sender As Object, e As EventArgs) Handles ejecutarSelecBtn.Click
@@ -33,11 +31,6 @@
         columnas = 4
         ReDim aux(filas, columnas)
 
-        For indexFilas = 0 To filas
-            For indexColumna = 0 To columnas
-                aux(indexFilas, indexColumna) = dgvM.Rows(indexFilas).Cells(indexColumna).Value
-            Next indexColumna
-        Next indexFilas
 
         For i = 0 To filas
             For j = 0 To columnas
@@ -49,21 +42,23 @@
         columnasPosicion = Val(columnaTxt.Text) - 1
 
         If totalRbtn.Checked = True Then
-            mayor = aux(1, columnasPosicion)
+            'mayor = aux(1, columnasPosicion)
             For f = 0 To filas
                 total = aux(f, columnasPosicion) + total
             Next f
             respuesta.Text = "Total"
             tbrespuesta.Text = total
+
         ElseIf mayorRbtn.Checked = True Then
-            mayor = aux(f, columnasPosicion)
+            mayor = aux(1, columnasPosicion)
             For f = 0 To filas
                 If mayor < aux(f, columnasPosicion) Then
                     mayor = aux(f, columnasPosicion)
                 End If
             Next f
-            respuesta.Text = "Promedio"
-            tbrespuesta.Text = promedio
+            respuesta.Text = "Mayor"
+            tbrespuesta.Text = mayor
+
         ElseIf menorRbtn.Checked = True Then
             menor = aux(f, columnasPosicion)
             For f = 0 To filas
@@ -72,7 +67,16 @@
                 End If
                 respuesta.Text = "Menor"
                 tbrespuesta.Text = menor
-            Next
+            Next f
+
+        ElseIf promedioRbtn.Checked = True Then
+            For f = 0 To filas
+                total = aux(f, columnasPosicion) + total
+            Next f
+            promedio = total / (filas + 1)
+            respuesta.Text = "Promedio"
+            tbrespuesta.Text = promedio
+
 
         End If
 
