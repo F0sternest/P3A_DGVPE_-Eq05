@@ -24,6 +24,11 @@ Partial Class adminForm
     Private Sub InitializeComponent()
         Me.cantidadFilasLbl = New System.Windows.Forms.Label()
         Me.dgvM = New System.Windows.Forms.DataGridView()
+        Me.columnaArena = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnaPiedra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnaCemento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clavos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ladrillos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.almacenBtn = New System.Windows.Forms.Button()
         Me.seleccionGroup = New System.Windows.Forms.GroupBox()
         Me.totalRbtn = New System.Windows.Forms.RadioButton()
@@ -33,11 +38,6 @@ Partial Class adminForm
         Me.columnaTxt = New System.Windows.Forms.TextBox()
         Me.columnaLbl = New System.Windows.Forms.Label()
         Me.ejecutarSelecBtn = New System.Windows.Forms.Button()
-        Me.columnaArena = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.columnaPiedra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.columnaCemento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Clavos = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ladrillos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.respuesta = New System.Windows.Forms.Label()
         Me.tbrespuesta = New System.Windows.Forms.TextBox()
         CType(Me.dgvM, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +65,31 @@ Partial Class adminForm
         Me.dgvM.Size = New System.Drawing.Size(331, 154)
         Me.dgvM.TabIndex = 3
         Me.dgvM.UseWaitCursor = True
+        '
+        'columnaArena
+        '
+        Me.columnaArena.HeaderText = "Arena (0)"
+        Me.columnaArena.Name = "columnaArena"
+        '
+        'columnaPiedra
+        '
+        Me.columnaPiedra.HeaderText = "Piedra (1)"
+        Me.columnaPiedra.Name = "columnaPiedra"
+        '
+        'columnaCemento
+        '
+        Me.columnaCemento.HeaderText = "Cemento (2)"
+        Me.columnaCemento.Name = "columnaCemento"
+        '
+        'Clavos
+        '
+        Me.Clavos.HeaderText = "Clavos(3)"
+        Me.Clavos.Name = "Clavos"
+        '
+        'Ladrillos
+        '
+        Me.Ladrillos.HeaderText = "Ladrillos(4)"
+        Me.Ladrillos.Name = "Ladrillos"
         '
         'almacenBtn
         '
@@ -174,31 +199,6 @@ Partial Class adminForm
         Me.ejecutarSelecBtn.UseVisualStyleBackColor = False
         Me.ejecutarSelecBtn.UseWaitCursor = True
         '
-        'columnaArena
-        '
-        Me.columnaArena.HeaderText = "Arena (0)"
-        Me.columnaArena.Name = "columnaArena"
-        '
-        'columnaPiedra
-        '
-        Me.columnaPiedra.HeaderText = "Piedra (1)"
-        Me.columnaPiedra.Name = "columnaPiedra"
-        '
-        'columnaCemento
-        '
-        Me.columnaCemento.HeaderText = "Cemento (2)"
-        Me.columnaCemento.Name = "columnaCemento"
-        '
-        'Clavos
-        '
-        Me.Clavos.HeaderText = "Clavos(3)"
-        Me.Clavos.Name = "Clavos"
-        '
-        'Ladrillos
-        '
-        Me.Ladrillos.HeaderText = "Ladrillos(4)"
-        Me.Ladrillos.Name = "Ladrillos"
-        '
         'respuesta
         '
         Me.respuesta.AutoSize = True
@@ -207,6 +207,7 @@ Partial Class adminForm
         Me.respuesta.Size = New System.Drawing.Size(39, 13)
         Me.respuesta.TabIndex = 7
         Me.respuesta.Text = "Label1"
+        Me.respuesta.UseWaitCursor = True
         '
         'tbrespuesta
         '
@@ -214,13 +215,14 @@ Partial Class adminForm
         Me.tbrespuesta.Name = "tbrespuesta"
         Me.tbrespuesta.Size = New System.Drawing.Size(51, 20)
         Me.tbrespuesta.TabIndex = 8
+        Me.tbrespuesta.UseWaitCursor = True
         '
         'adminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(850, 493)
+        Me.ClientSize = New System.Drawing.Size(554, 242)
         Me.Controls.Add(Me.tbrespuesta)
         Me.Controls.Add(Me.respuesta)
         Me.Controls.Add(Me.ejecutarSelecBtn)
