@@ -1,24 +1,30 @@
 ﻿Public Class adminForm
     Private Sub almacenBtn_Click(sender As Object, e As EventArgs) Handles almacenBtn.Click
+        Dim cant_almacenes As Integer = InputBox("Ingrese la cantidad de almacenes", "Almacenes", "")
         Dim aux(,) As Integer 'Arreglo llamado aux
-        Dim filas, columnas As Integer
+        Dim filas, columnas, i As Integer
 
-        filas = Val(filasTxt.Text)
-        columnas = filas
+        filas = Val(cant_almacenes) - 1
+        columnas = 4
         ReDim aux(filas, columnas)
 
         Me.dgvM.RowHeadersWidth = 120
-        dgvM.RowCount = filas + 3
+        dgvM.RowCount = filas + 1
         dgvM.ColumnCount = columnas + 1
-        dgvM.Rows(0).HeaderCell.Value = "San Miguelito"
-        dgvM.Rows(1).HeaderCell.Value = "San Miguelito 1"
-        dgvM.Rows(2).HeaderCell.Value = "San Miguelito 2"
+
+        For i = 0 To filas
+            dgvM.Rows(0 + i).HeaderCell.Value = InputBox("Nombre del almacen número" & i + 1, "Almacenes", "")
+        Next
+
+        'dgvM.Rows(0).HeaderCell.Value = "San Miguelito"
+        'dgvM.Rows(1).HeaderCell.Value = "San Miguelito 1"
+        'dgvM.Rows(2).HeaderCell.Value = "San Miguelito 2"
     End Sub
 
     Private Sub ejecutarSelecBtn_Click(sender As Object, e As EventArgs) Handles ejecutarSelecBtn.Click
         Dim aux(,) As Integer 'Arreglo llamado aux
         Dim filas, columnas, index, f, columnasPosicion, mayor, menor, total As Integer
-        filas = Val(filasTxt.Text)
+        filas = Val(filas)
         columnas = filas
         ReDim aux(filas, columnas)
 
@@ -27,6 +33,7 @@
                 aux(indexFilas, indexColumna) = dgvM.Rows(indexFilas).Cells(indexColumna).Value
             Next indexColumna
         Next indexFilas
+
 
         columnasPosicion = Val(columnaTxt.Text)
 
@@ -43,5 +50,13 @@
             dgvM.Rows(filas + 1).Cells(columnasPosicion).Value = mayor
             dgvM.Rows(filas + 1).HeaderCell.Value = ""
         End If
+    End Sub
+
+    Private Sub adminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub dgvM_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvM.CellContentClick
+
     End Sub
 End Class
