@@ -1,8 +1,11 @@
 ﻿Public Class adminForm
+
+    Dim n As Integer
     Private Sub almacenBtn_Click(sender As Object, e As EventArgs) Handles almacenBtn.Click
         Dim cant_almacenes As Integer = InputBox("Ingrese la cantidad de almacenes", "Almacenes", "")
         Dim aux(,) As Integer 'Arreglo llamado aux
         Dim filas, columnas, i As Integer
+        n = cant_almacenes
 
         filas = Val(cant_almacenes) - 1
         columnas = 4
@@ -24,8 +27,10 @@
     Private Sub ejecutarSelecBtn_Click(sender As Object, e As EventArgs) Handles ejecutarSelecBtn.Click
         Dim aux(,) As Integer 'Arreglo llamado aux
         Dim filas, columnas, index, f, columnasPosicion, mayor, menor, total As Integer
-        filas = Val(filas)
-        columnas = filas
+        Dim promedio As Double
+        filas = Val(n) - 1
+        'columnas = filas
+        columnas = 4
         ReDim aux(filas, columnas)
 
         For indexFilas = 0 To filas
@@ -34,22 +39,46 @@
             Next indexColumna
         Next indexFilas
 
+        For i = 0 To filas
+            For j = 0 To columnas
+                aux(i, j) = dgvM.Rows(i).Cells(j).Value
+            Next j
+        Next i
 
-        columnasPosicion = Val(columnaTxt.Text)
 
-        If totalRbtn.Checked Then
+        columnasPosicion = Val(columnaTxt.Text) - 1
+
+        If totalRbtn.Checked = True Then
             mayor = aux(1, columnasPosicion)
+            For f = 0 To filas
+                total = aux(f, columnasPosicion) + total
+            Next f
+            respuesta.Text = "Total"
+            tbrespuesta.Text = total
+        ElseIf mayorRbtn.Checked = True Then
+            mayor = aux(f, columnasPosicion)
             For f = 0 To filas
                 If mayor < aux(f, columnasPosicion) Then
                     mayor = aux(f, columnasPosicion)
                 End If
             Next f
-            dgvM.Rows(filas + 1).Cells(0).Value = ""
-            dgvM.Rows(filas + 1).Cells(1).Value = ""
-            dgvM.Rows(filas + 1).Cells(2).Value = ""
-            dgvM.Rows(filas + 1).Cells(columnasPosicion).Value = mayor
-            dgvM.Rows(filas + 1).HeaderCell.Value = ""
+            respuesta.Text = "Promedio"
+            tbrespuesta.Text = promedio
+        ElseIf menorRbtn.Checked = True Then
+            menor = aux(f, columnasPosicion)
+            For f = 0 To filas
+                If menor > aux(f, columnasPosicion) Then
+                    menor = aux(f, columnasPosicion)
+                End If
+                respuesta.Text = "Menor"
+                tbrespuesta.Text = menor
+            Next
+
         End If
+
+
+
+
     End Sub
 
     Private Sub adminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

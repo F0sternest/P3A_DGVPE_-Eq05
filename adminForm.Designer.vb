@@ -38,6 +38,8 @@ Partial Class adminForm
         Me.columnaCemento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Clavos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ladrillos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.respuesta = New System.Windows.Forms.Label()
+        Me.tbrespuesta = New System.Windows.Forms.TextBox()
         CType(Me.dgvM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.seleccionGroup.SuspendLayout()
         Me.SuspendLayout()
@@ -46,7 +48,7 @@ Partial Class adminForm
         '
         Me.cantidadFilasLbl.AutoSize = True
         Me.cantidadFilasLbl.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cantidadFilasLbl.Location = New System.Drawing.Point(62, 67)
+        Me.cantidadFilasLbl.Location = New System.Drawing.Point(9, 9)
         Me.cantidadFilasLbl.Name = "cantidadFilasLbl"
         Me.cantidadFilasLbl.Size = New System.Drawing.Size(249, 32)
         Me.cantidadFilasLbl.TabIndex = 0
@@ -58,9 +60,9 @@ Partial Class adminForm
         '
         Me.dgvM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.columnaArena, Me.columnaPiedra, Me.columnaCemento, Me.Clavos, Me.Ladrillos})
-        Me.dgvM.Location = New System.Drawing.Point(65, 134)
+        Me.dgvM.Location = New System.Drawing.Point(12, 59)
         Me.dgvM.Name = "dgvM"
-        Me.dgvM.Size = New System.Drawing.Size(599, 154)
+        Me.dgvM.Size = New System.Drawing.Size(331, 154)
         Me.dgvM.TabIndex = 3
         Me.dgvM.UseWaitCursor = True
         '
@@ -68,9 +70,9 @@ Partial Class adminForm
         '
         Me.almacenBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.almacenBtn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.almacenBtn.Location = New System.Drawing.Point(368, 58)
+        Me.almacenBtn.Location = New System.Drawing.Point(264, 9)
         Me.almacenBtn.Name = "almacenBtn"
-        Me.almacenBtn.Size = New System.Drawing.Size(158, 41)
+        Me.almacenBtn.Size = New System.Drawing.Size(110, 41)
         Me.almacenBtn.TabIndex = 4
         Me.almacenBtn.Text = "Ingresar "
         Me.almacenBtn.UseVisualStyleBackColor = False
@@ -85,9 +87,9 @@ Partial Class adminForm
         Me.seleccionGroup.Controls.Add(Me.columnaTxt)
         Me.seleccionGroup.Controls.Add(Me.columnaLbl)
         Me.seleccionGroup.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.seleccionGroup.Location = New System.Drawing.Point(65, 306)
+        Me.seleccionGroup.Location = New System.Drawing.Point(349, 87)
         Me.seleccionGroup.Name = "seleccionGroup"
-        Me.seleccionGroup.Size = New System.Drawing.Size(239, 126)
+        Me.seleccionGroup.Size = New System.Drawing.Size(179, 126)
         Me.seleccionGroup.TabIndex = 5
         Me.seleccionGroup.TabStop = False
         Me.seleccionGroup.Text = "Seleccion"
@@ -96,7 +98,7 @@ Partial Class adminForm
         'totalRbtn
         '
         Me.totalRbtn.AutoSize = True
-        Me.totalRbtn.Location = New System.Drawing.Point(146, 95)
+        Me.totalRbtn.Location = New System.Drawing.Point(96, 95)
         Me.totalRbtn.Name = "totalRbtn"
         Me.totalRbtn.Size = New System.Drawing.Size(54, 20)
         Me.totalRbtn.TabIndex = 7
@@ -108,7 +110,7 @@ Partial Class adminForm
         'menorRbtn
         '
         Me.menorRbtn.AutoSize = True
-        Me.menorRbtn.Location = New System.Drawing.Point(146, 61)
+        Me.menorRbtn.Location = New System.Drawing.Point(96, 61)
         Me.menorRbtn.Name = "menorRbtn"
         Me.menorRbtn.Size = New System.Drawing.Size(61, 20)
         Me.menorRbtn.TabIndex = 6
@@ -120,7 +122,7 @@ Partial Class adminForm
         'promedioRbtn
         '
         Me.promedioRbtn.AutoSize = True
-        Me.promedioRbtn.Location = New System.Drawing.Point(61, 95)
+        Me.promedioRbtn.Location = New System.Drawing.Point(9, 95)
         Me.promedioRbtn.Name = "promedioRbtn"
         Me.promedioRbtn.Size = New System.Drawing.Size(79, 20)
         Me.promedioRbtn.TabIndex = 5
@@ -132,7 +134,7 @@ Partial Class adminForm
         'mayorRbtn
         '
         Me.mayorRbtn.AutoSize = True
-        Me.mayorRbtn.Location = New System.Drawing.Point(61, 61)
+        Me.mayorRbtn.Location = New System.Drawing.Point(9, 61)
         Me.mayorRbtn.Name = "mayorRbtn"
         Me.mayorRbtn.Size = New System.Drawing.Size(60, 20)
         Me.mayorRbtn.TabIndex = 4
@@ -144,9 +146,9 @@ Partial Class adminForm
         'columnaTxt
         '
         Me.columnaTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.columnaTxt.Location = New System.Drawing.Point(121, 24)
+        Me.columnaTxt.Location = New System.Drawing.Point(121, 27)
         Me.columnaTxt.Name = "columnaTxt"
-        Me.columnaTxt.Size = New System.Drawing.Size(100, 23)
+        Me.columnaTxt.Size = New System.Drawing.Size(49, 23)
         Me.columnaTxt.TabIndex = 3
         Me.columnaTxt.UseWaitCursor = True
         '
@@ -164,9 +166,9 @@ Partial Class adminForm
         '
         Me.ejecutarSelecBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ejecutarSelecBtn.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ejecutarSelecBtn.Location = New System.Drawing.Point(341, 380)
+        Me.ejecutarSelecBtn.Location = New System.Drawing.Point(378, 40)
         Me.ejecutarSelecBtn.Name = "ejecutarSelecBtn"
-        Me.ejecutarSelecBtn.Size = New System.Drawing.Size(158, 41)
+        Me.ejecutarSelecBtn.Size = New System.Drawing.Size(92, 41)
         Me.ejecutarSelecBtn.TabIndex = 6
         Me.ejecutarSelecBtn.Text = "Ejecutar Seleccion"
         Me.ejecutarSelecBtn.UseVisualStyleBackColor = False
@@ -197,12 +199,30 @@ Partial Class adminForm
         Me.Ladrillos.HeaderText = "Ladrillos(4)"
         Me.Ladrillos.Name = "Ladrillos"
         '
+        'respuesta
+        '
+        Me.respuesta.AutoSize = True
+        Me.respuesta.Location = New System.Drawing.Point(393, 11)
+        Me.respuesta.Name = "respuesta"
+        Me.respuesta.Size = New System.Drawing.Size(39, 13)
+        Me.respuesta.TabIndex = 7
+        Me.respuesta.Text = "Label1"
+        '
+        'tbrespuesta
+        '
+        Me.tbrespuesta.Location = New System.Drawing.Point(438, 9)
+        Me.tbrespuesta.Name = "tbrespuesta"
+        Me.tbrespuesta.Size = New System.Drawing.Size(51, 20)
+        Me.tbrespuesta.TabIndex = 8
+        '
         'adminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(850, 493)
+        Me.Controls.Add(Me.tbrespuesta)
+        Me.Controls.Add(Me.respuesta)
         Me.Controls.Add(Me.ejecutarSelecBtn)
         Me.Controls.Add(Me.seleccionGroup)
         Me.Controls.Add(Me.almacenBtn)
@@ -236,4 +256,6 @@ Partial Class adminForm
     Friend WithEvents columnaCemento As DataGridViewTextBoxColumn
     Friend WithEvents Clavos As DataGridViewTextBoxColumn
     Friend WithEvents Ladrillos As DataGridViewTextBoxColumn
+    Friend WithEvents respuesta As Label
+    Friend WithEvents tbrespuesta As TextBox
 End Class

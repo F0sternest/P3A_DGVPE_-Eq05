@@ -41,6 +41,7 @@ Partial Class presentacionFrm
         '
         'presentacionGroup
         '
+        Me.presentacionGroup.BackColor = System.Drawing.Color.White
         Me.presentacionGroup.Controls.Add(Me.pb_almacen)
         Me.presentacionGroup.Controls.Add(Me.Label5)
         Me.presentacionGroup.Controls.Add(Me.Label4)
@@ -170,6 +171,7 @@ Partial Class presentacionFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(850, 788)
         Me.Controls.Add(Me.presentacionGroup)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
